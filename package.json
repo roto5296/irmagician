@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
- "repository": {
+  "repository": {
     "type": "git",
     "url": "git@github.com:tamaki-shingo/irmagician.git"
   },
@@ -16,7 +16,6 @@
   "author": "Shingo Tamaki",
   "license": "ISC",
   "dependencies": {
-    "co": "^4.6.0",
     "colors": "^1.1.2",
     "meow": "^3.7.0",
     "serialport": "^3.0.0"

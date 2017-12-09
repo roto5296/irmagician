@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#!/usr/local/bin/node --harmony
 
 const irMagician = require("../lib/irMagician")
 const meow = require("meow")
@@ -26,34 +26,34 @@ Examples
 
 switch (cli.input[0]) {
 case "capture":
-    irMagician.capture(cli.flags["p"])
+    irMagician.capture(cli.flags["p"]).catch(err => console.log(err.message))
     break
 case "play":
     if (cli.input[1]) {
-        irMagician.play(cli.input[1], cli.flags["p"])
+        irMagician.play(cli.input[1], cli.flags["p"]).catch(err => console.log(err.message))
     } else {
-        irMagician.play(undefined, cli.flags["p"])
+        irMagician.play(undefined, cli.flags["p"]).catch(err => console.log(err.message))
     }
     break
 case "dump":
     if (cli.input[1]) {
-        irMagician.dump(cli.input[1])
+        irMagician.dump(cli.input[1]).catch(err => console.log(err.message))
     } else {
-        irMagician.dump(undefined, cli.flags["p"])
+        irMagician.dump(undefined, cli.flags["p"]).catch(err => console.log(err.message))
     }
     break
 case "write":
     if (cli.input[1]) {
-        irMagician.write(cli.input[1], cli.flags["p"])
+        irMagician.write(cli.input[1], cli.flags["p"]).catch(err => console.log(err.message))
     } else {
         cli.showHelp()
     }
     break
 case "temp":
-    irMagician.temp(cli.flags["p"])
+    irMagician.temp(cli.flags["p"]).catch(err => console.log(err.message))
     break
 case "info":
-    irMagician.info(cli.flags["p"])
+    irMagician.info(cli.flags["p"]).catch(err => console.log(err.message))
     break
 case "showPorts":
     require("../node_modules/serialport/bin/serialport-list.js")
