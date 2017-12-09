@@ -56,7 +56,7 @@ case "info":
     irMagician.info(cli.flags["p"]).catch(err => console.log(err.message))
     break
 case "showPorts":
-    require("../node_modules/serialport/bin/serialport-list.js")
+    require("../node_modules/serialport/bin/list.js")
 
     break
 default:

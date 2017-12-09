@@ -18,7 +18,7 @@
   "dependencies": {
     "colors": "^1.1.2",
     "meow": "^3.7.0",
-    "serialport": "^3.0.0"
+    "serialport": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^2.11.0"
